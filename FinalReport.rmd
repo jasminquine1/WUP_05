@@ -1,7 +1,7 @@
 ---
 title: "Aides Drug"
 author: "Jasmin Quintanilla"
-date: "Spring 2024"
+date: "Summer 2024"
 output: html_document
 ---
 
@@ -9,6 +9,10 @@ output: html_document
 require(tidyverse)
 require(tigerstats)
 triUmp <-read.csv(file="triUmpsal.csv",header=TRUE)
+
+druggies = select(triUmp, c(treatment, infected, DrugUser))
+druggies = filter(druggies, DrugUser == "yes")
+
 ```
 
 # Introduction
@@ -19,7 +23,7 @@ A new  preventative aides drug (triUmpsal) is under test in clinical trials. Con
 
 
 $H_0$:  
-$H_A$:
+$H_A$:  
 
 
 # Methods
@@ -27,11 +31,11 @@ $H_A$:
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
 
-Variables we use are:
-treatment - categorical
-DrugUser - categorical 
-infected - categortical 
-
+Variables we use are:  
+treatment - categorical variable   
+DrugUser - categorical variable   
+infected - categorical variable  
+so I used the cat~cat helper file
 
 
 # Results
